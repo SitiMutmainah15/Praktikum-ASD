@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class pemilihan {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
         double tugas, kuis, uts, uas, nilaiAkhir;
         String nilaiHuruf, ket;
         //input
