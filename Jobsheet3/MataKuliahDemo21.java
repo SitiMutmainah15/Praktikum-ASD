@@ -2,11 +2,13 @@ import java.util.Scanner;
 public class MataKuliahDemo21 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        MataKuliah21[] arrayOfMataKuliah21 = new MataKuliah21[3];
+        System.out.print("Masukkan jumlah matakuliah: ");
+        int jumlahMatakuliah = Integer.parseInt(sc.nextLine());
+        MataKuliah21[] arrayOfMataKuliah21 = new MataKuliah21[jumlahMatakuliah];
         String kode, nama, dosenPengajar;
         int sks, jumlahJam;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < jumlahMatakuliah; i++) {
             System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
             System.out.print("Kode           : ");
             kode = sc.nextLine();
@@ -24,7 +26,7 @@ public class MataKuliahDemo21 {
             arrayOfMataKuliah21[i].tambahData(dosenPengajar);
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < jumlahMatakuliah; i++) {
             System.out.println("DATA MATAKULIAH KE-" + (i + 1));
             arrayOfMataKuliah21[i].cetakInfo();
         }
