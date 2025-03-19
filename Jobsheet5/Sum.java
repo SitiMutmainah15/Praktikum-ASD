@@ -18,7 +18,7 @@ public class Sum {
         }
         int mid=(l+r)/2;
         double lsum = totalDC(arr, l, mid);
-        double rsum = totalDC(arr, mid+l, r);
+        double rsum = totalDC(arr, mid+1, r);
         return lsum+rsum;
 
     }

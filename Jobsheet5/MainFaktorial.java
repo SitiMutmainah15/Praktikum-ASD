@@ -8,7 +8,6 @@ public class MainFaktorial {
 
     
     Faktorial fk = new Faktorial();
-    
     System.out.println("Nilai  Faktorial "+nilai+
     "Menggunakan BF: "+fk.faktorialBF(nilai));
     System.out.println("Nilai  Faktorial "+nilai+
