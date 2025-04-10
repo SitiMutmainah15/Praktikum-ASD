@@ -35,6 +35,22 @@ public class MahasiswaDemo21 {
         list.tampilPosisi(cari, pss);
         list.tampilDataSearch(cari, pss);
         
+        // Melakukan pencarian data Binary
+        System.out.println("--------------------------------------------------");
+        System.out.println("Pencarian data");
+        System.out.println("--------------------------------------------------");
+        System.out.println("Masukkan IPK mahasiswa yang dicari: ");
+        System.out.print("IPK: ");
+        cari = sc.nextDouble();
+
+        System.out.println("--------------------------------------------------");
+        System.out.println("Menggunakan binary search");
+        System.out.println("--------------------------------------------------");
+
+        double posisi2 = list.findBinarySearch(cari, 0, jumMhs - 1);
+        int pss2 = (int) posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
 
     }
 }
