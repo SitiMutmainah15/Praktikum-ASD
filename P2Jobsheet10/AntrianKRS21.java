@@ -67,7 +67,7 @@ public class AntrianKRS21 {
         System.out.println(mhs.nama + " berhasil masuk ke antrian.");
     }
 
-    public void layaniRS25() {
+    public void layaniKRS() {
         if (size < 2) {
             System.out.println("Antrian harus minimal 2 mahasiswa");
             return;
