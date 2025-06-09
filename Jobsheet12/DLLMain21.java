@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
+import javax.sound.sampled.Line;
+
 public class DLLMain21 {
     public static void main(String[] args) {
         DoubleLinkedList21 list = new DoubleLinkedList21();
+        System.out.println("Jumlah data dalam linked list: " + list.size());
+        list.print();
+        
         Scanner scan = new Scanner(System.in);
         int pilihan;
 
@@ -14,6 +19,7 @@ public class DLLMain21 {
             System.out.println("4. Hapus di akhir");
             System.out.println("5. Tampilkan data");
             System.out.println("6. Cari Mahasiswa berdasarkan NIM");
+            System.out.println("7. Tambah setelah data");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scan.nextInt();
@@ -42,6 +48,20 @@ public class DLLMain21 {
                         System.out.println("Data tidak ditemukan");
                     }
                 }
+                case 7 -> {
+                    System.out.print("Masukkan NIM yang dicari: ");
+                    String cariNIM = scan.nextLine();
+                    System.out.print("Masukkan NIM baru: ");
+                    String nimBaru = scan.nextLine();
+                    System.out.print("Masukkan nama: ");
+                    String namaBaru = scan.nextLine();
+                    System.out.print("Masukkan kelas: ");
+                    String kelasBaru = scan.nextLine();
+                    System.out.print("Masukkan ipk: ");
+                    double ipkBaru = scan.nextDouble();
+                    Mahasiswa21 mhsBaru = new Mahasiswa21(nimBaru, namaBaru, kelasBaru, ipkBaru);
+                    list.insertAfter(cariNIM, mhsBaru);
+                }
                 case 0 -> System.out.println("Keluar dari program");
                 default -> System.out.println("Pilihan tidak valid!");
             }
@@ -50,17 +70,17 @@ public class DLLMain21 {
         scan.close();
     }
 
-   public static Mahasiswa21 inputMahasiswa(Scanner scan) {
-    System.out.print("Masukkan NIM: ");
-    String nim = scan.nextLine();
-    System.out.print("Masukkan Nama: ");
-    String nama = scan.nextLine();
-    System.out.print("Masukkan Kelas: ");
-    String kelas = scan.nextLine();
-    System.out.print("Masukkan IPK: ");
-    double ipk = scan.nextDouble();
-    scan.nextLine();
+    public static Mahasiswa21 inputMahasiswa(Scanner scan) {
+        System.out.print("Masukkan NIM: ");
+        String nim = scan.nextLine();
+        System.out.print("Masukkan Nama: ");
+        String nama = scan.nextLine();
+        System.out.print("Masukkan Kelas: ");
+        String kelas = scan.nextLine();
+        System.out.print("Masukkan IPK: ");
+        double ipk = scan.nextDouble();
+        scan.nextLine();
 
-    return new Mahasiswa21(nim, nama, kelas, ipk);
-}
+        return new Mahasiswa21(nim, nama, kelas, ipk);
+    }
 }

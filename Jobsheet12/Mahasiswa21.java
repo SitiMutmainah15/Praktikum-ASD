@@ -1,4 +1,4 @@
-public class Mahasiswa21{
+public class Mahasiswa21 {
     public String nim;
     public String nama;
     public String kelas;
@@ -11,7 +11,7 @@ public class Mahasiswa21{
         this.ipk = ipk;
     }
 
-    public void tampil (){
-        System.out.println("NIM: " + nim + ", Nama: " + nama + ", Kelas: " + kelas + ", IPK: " + ipk );
+    public void tampil() {
+        System.out.println("NIM: " + nim + ", Nama: " + nama + ", Kelas: " + kelas + ", IPK: " + ipk);
     }
 }

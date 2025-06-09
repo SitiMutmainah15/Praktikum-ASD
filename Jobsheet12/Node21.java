@@ -3,9 +3,9 @@ public class Node21 {
     Node21 prev;
     Node21 next;
 
-    public Node21 (Mahasiswa21 data){
-        this.data=data;
-        this.prev=null;
-        this.next=null;
+    public Node21(Mahasiswa21 data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
     }
 }
